@@ -6,9 +6,17 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+// gcc -o stack -Wall -Wextra stack.c
+// ./stack
+
 int main(void)
 {
     // Your code here
+    int x = 100;
+
+    fork();
+
+    printf("x is %d\n", x);
 
     return 0;
 }
