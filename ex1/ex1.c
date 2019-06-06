@@ -11,10 +11,16 @@
 
 int main(void)
 {
-    // Your code here
+    // Assign a variable
     int x = 100;
 
-    fork();
+    printf("x is %d\n", x);
+
+    // Fork returns a process id
+    pid_t pid = fork();
+
+    // Change the variable
+    x = 2;
 
     printf("x is %d\n", x);
 
