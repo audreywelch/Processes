@@ -9,7 +9,20 @@
 
 int main(void)
 {
-    // Your code here
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        fprintf(stderr, "fork failed\n");
+        exit(1);
+    } else if (pid == 0) {
+        printf("Hello\n");
+    } else {
+        // wait(NULL);
+        
+        int wc = waitpid(pid, NULL, 0);
+
+        printf("Goodbye\n");
+    }
 
     return 0;
 }
