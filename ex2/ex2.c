@@ -8,7 +8,11 @@
 
 int main(void)
 {
-    // Your code here 
+    // Open the text.txt file
+    FILE *fp;
+    fp = fopen("text.txt", "r+");
+
+    fprintf(fp, "");
     
     return 0;
 }
